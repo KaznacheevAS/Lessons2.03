@@ -36,6 +36,10 @@
                                         <rect key="frame" x="0.0" y="108" width="255" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="securitiPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="d8I-Y0-qFP"/>
+                                            <segue destination="qUR-MY-cR0" kind="showDetail" id="3hG-dg-6Fa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-G6-5pr">
                                         <rect key="frame" x="0.0" y="172" width="255" height="30"/>
@@ -76,6 +80,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="123.88392857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sic-aE-NI8">
+            <objects>
+                <viewController id="qUR-MY-cR0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WWf-Li-g40">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nf-Mm-dPs">
+                                <rect key="frame" x="120" y="199" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GD-cU-qWf">
+                                <rect key="frame" x="20" y="644" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="8IV-9H-s42"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upi-tm-krk">
+                                <rect key="frame" x="186" y="286" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cm1-jQ-1k8"/>
+                        <color key="backgroundColor" red="0.43922115925823291" green="0.86411669143696423" blue="0.53960080318722403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="upi-tm-krk" firstAttribute="top" secondItem="WWf-Li-g40" secondAttribute="top" constant="286" id="3Av-OG-yEg"/>
+                            <constraint firstItem="cm1-jQ-1k8" firstAttribute="bottom" secondItem="3GD-cU-qWf" secondAttribute="bottom" constant="105" id="IXs-v7-ABn"/>
+                            <constraint firstItem="3GD-cU-qWf" firstAttribute="centerX" secondItem="upi-tm-krk" secondAttribute="centerX" id="VLu-HF-KtS"/>
+                            <constraint firstItem="upi-tm-krk" firstAttribute="centerX" secondItem="9nf-Mm-dPs" secondAttribute="centerX" id="Y5l-cD-sZE"/>
+                            <constraint firstItem="upi-tm-krk" firstAttribute="top" secondItem="9nf-Mm-dPs" secondAttribute="bottom" constant="57" id="aPv-4N-LLy"/>
+                            <constraint firstItem="3GD-cU-qWf" firstAttribute="leading" secondItem="WWf-Li-g40" secondAttribute="leadingMargin" id="msZ-I5-NEW"/>
+                            <constraint firstItem="upi-tm-krk" firstAttribute="centerX" secondItem="WWf-Li-g40" secondAttribute="centerX" id="oLT-ML-eCA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNl-QF-agp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="123.88392857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xdZ-aj-Hxp">

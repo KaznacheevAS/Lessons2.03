@@ -22,18 +22,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let startPole = UIAlertController(title: "Внимание!", message: "Вам нужно заполнить поля:\n User и Password", preferredStyle: .alert)
-        startPole.addAction(UIAlertAction(title:"Хорошо", style: .cancel, handler:  nil))
-        
-        self.present(startPole, animated: true)
+
         
     }
 
     @IBAction func securitiPassword() {
         let textActive = "Password"
         inputPasswordPole.isSecureTextEntry = true
-        
-        
+                
         if (inputPasswordPole.text != textActive){
             activeBottomPasswordHelp()
         }else if (inputPasswordPole.text == nil) {
@@ -41,11 +37,20 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+        }
+        super .touchesBegan(touches, with: event)
+    }
     /*
       Делаем уведомление если нажать на Forgot...
       */
     @IBAction func avtivBottomUserHelp(_ sender: UIButton) {
         alertBottomHelp(name: nameUser)
+        
     }
     
     @IBAction func activeBottomPasswordHelp() {
@@ -53,10 +58,9 @@ class ViewController: UIViewController {
     }
 
     private func alertBottomHelp(name: String ) {
-        let alertPassword = UIAlertController(title: "Ooops!", message: "Your password is \(name)  😤", preferredStyle: .alert)
+        let alertPassword = UIAlertController(title: "Ooops!", message: "Your \(name) is \(name)  😤", preferredStyle: .alert)
         alertPassword.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
         
         self.present(alertPassword, animated: true)
     }
 }
-
