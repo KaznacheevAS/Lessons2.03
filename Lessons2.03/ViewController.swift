@@ -15,37 +15,48 @@ class ViewController: UIViewController {
     @IBOutlet var bottomUserNameHelp: UIButton!
     @IBOutlet var bottomPasswordHelp: UIButton!
     
+    let nameUser = "User"
+    let namePassword = "Password"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let startPole = UIAlertController(title: "👀", message: "Вам нужно заполнить поля:\n User и Password", preferredStyle: .alert)
+        let startPole = UIAlertController(title: "Внимание!", message: "Вам нужно заполнить поля:\n User и Password", preferredStyle: .alert)
         startPole.addAction(UIAlertAction(title:"Хорошо", style: .cancel, handler:  nil))
         
         self.present(startPole, animated: true)
         
-        
-        
-        
     }
 
-    
+    @IBAction func securitiPassword() {
+        let textActive = "Password"
+        inputPasswordPole.isSecureTextEntry = true
+        
+        
+        if (inputPasswordPole.text != textActive){
+            activeBottomPasswordHelp()
+        }else if (inputPasswordPole.text == nil) {
+            activeBottomPasswordHelp()
+        }
+        
+    }
+    /*
+      Делаем уведомление если нажать на Forgot...
+      */
     @IBAction func avtivBottomUserHelp(_ sender: UIButton) {
-        let alertUser = UIAlertController(title: "Ooops!", message:"Yuar name is User 😤", preferredStyle: .alert)
-        
-        alertUser.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
-        
-        self.present(alertUser, animated: true)
+        alertBottomHelp(name: nameUser)
     }
     
     @IBAction func activeBottomPasswordHelp() {
-        let alertPassword = UIAlertController(title: "Ooops!", message: "Your password is Password  😤", preferredStyle: .alert)
+        alertBottomHelp(name: namePassword)
+    }
+
+    private func alertBottomHelp(name: String ) {
+        let alertPassword = UIAlertController(title: "Ooops!", message: "Your password is \(name)  😤", preferredStyle: .alert)
         alertPassword.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
         
         self.present(alertPassword, animated: true)
     }
-   
-
 }
 
