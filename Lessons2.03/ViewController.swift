@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var bottomUserNameHelp: UIButton!
     @IBOutlet var bottomPasswordHelp: UIButton!
     
+    @IBOutlet var bottomLogIn: UIButton!
+    
+    
     let nameUser = "User"
     let namePassword = "Password"
     
@@ -27,14 +30,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func securitiPassword() {
-        let textActive = "Password"
+        //let textActive = "Password"
         inputPasswordPole.isSecureTextEntry = true
                 
-        if (inputPasswordPole.text != textActive){
-            activeBottomPasswordHelp()
-        }else if (inputPasswordPole.text == nil) {
-            activeBottomPasswordHelp()
-        }
+
         
     }
     
@@ -57,10 +56,31 @@ class ViewController: UIViewController {
         alertBottomHelp(name: namePassword)
     }
 
+    
+    @IBAction func clickLogIn() {
+        if (inputPasswordPole.text != namePassword || inputUserPole.text != nameUser){
+            errorInput()
+        }
+        
+    }
+    
+    
     private func alertBottomHelp(name: String ) {
         let alertPassword = UIAlertController(title: "Ooops!", message: "Your \(name) is \(name)  😤", preferredStyle: .alert)
         alertPassword.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
         
         self.present(alertPassword, animated: true)
     }
+    /*
+     Выводим сообщение об ошибки если поля не заполненны корректно
+     */
+    private func errorInput() {
+        let errorAlert = UIAlertController(title: "Invalid login or password", message: "Please, enter correct Login and Password", preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        
+        self.present(errorAlert, animated: true)
+    }
+    
+    
+    
 }

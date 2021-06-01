@@ -37,6 +37,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
+                                            <action selector="clickLogIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdd-FZ-mm0"/>
                                             <action selector="securitiPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="d8I-Y0-qFP"/>
                                             <segue destination="qUR-MY-cR0" kind="showDetail" id="3hG-dg-6Fa"/>
                                         </connections>
@@ -71,6 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6hK-z4-HKa"/>
                     <connections>
+                        <outlet property="bottomLogIn" destination="M2F-fZ-64X" id="XXI-dZ-Y3M"/>
                         <outlet property="bottomPasswordHelp" destination="JPb-yA-kjg" id="Y9X-Yl-uh3"/>
                         <outlet property="bottomUserNameHelp" destination="gPy-G6-5pr" id="xau-Bm-Bgq"/>
                         <outlet property="inputPasswordPole" destination="NtQ-O3-VJ9" id="IKx-CG-FzR"/>
