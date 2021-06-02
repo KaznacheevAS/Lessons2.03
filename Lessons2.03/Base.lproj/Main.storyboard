@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="123.88392857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="Sic-aE-NI8">
             <objects>
-                <viewController id="qUR-MY-cR0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomSecureTextField" id="qUR-MY-cR0" customClass="SettingsViewController" customModule="Lessons2_03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWf-Li-g40">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,38 +97,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GD-cU-qWf">
-                                <rect key="frame" x="20" y="644" width="374" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upi-tm-krk">
+                                <rect key="frame" x="171" y="286" width="72" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl1-id-Dus">
+                                <rect key="frame" x="20" y="682" width="374" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="8IV-9H-s42"/>
+                                    <constraint firstAttribute="height" constant="60" id="5fp-QW-Ogo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upi-tm-krk">
-                                <rect key="frame" x="186" y="286" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickButtonCansel" destination="qUR-MY-cR0" eventType="touchUpInside" id="TRA-Vs-AUQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cm1-jQ-1k8"/>
                         <color key="backgroundColor" red="0.43922115925823291" green="0.86411669143696423" blue="0.53960080318722403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="upi-tm-krk" firstAttribute="top" secondItem="WWf-Li-g40" secondAttribute="top" constant="286" id="3Av-OG-yEg"/>
-                            <constraint firstItem="cm1-jQ-1k8" firstAttribute="bottom" secondItem="3GD-cU-qWf" secondAttribute="bottom" constant="105" id="IXs-v7-ABn"/>
-                            <constraint firstItem="3GD-cU-qWf" firstAttribute="centerX" secondItem="upi-tm-krk" secondAttribute="centerX" id="VLu-HF-KtS"/>
+                            <constraint firstItem="cm1-jQ-1k8" firstAttribute="bottom" secondItem="pl1-id-Dus" secondAttribute="bottom" constant="66" id="AUU-DX-owI"/>
+                            <constraint firstItem="pl1-id-Dus" firstAttribute="leading" secondItem="WWf-Li-g40" secondAttribute="leadingMargin" id="OzW-5x-EZI"/>
                             <constraint firstItem="upi-tm-krk" firstAttribute="centerX" secondItem="9nf-Mm-dPs" secondAttribute="centerX" id="Y5l-cD-sZE"/>
                             <constraint firstItem="upi-tm-krk" firstAttribute="top" secondItem="9nf-Mm-dPs" secondAttribute="bottom" constant="57" id="aPv-4N-LLy"/>
-                            <constraint firstItem="3GD-cU-qWf" firstAttribute="leading" secondItem="WWf-Li-g40" secondAttribute="leadingMargin" id="msZ-I5-NEW"/>
+                            <constraint firstItem="pl1-id-Dus" firstAttribute="centerX" secondItem="upi-tm-krk" secondAttribute="centerX" id="myf-Bm-ymS"/>
                             <constraint firstItem="upi-tm-krk" firstAttribute="centerX" secondItem="WWf-Li-g40" secondAttribute="centerX" id="oLT-ML-eCA"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNl-QF-agp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815.9420289855075" y="123.88392857142857"/>
+            <point key="canvasLocation" x="1831.8840579710147" y="123.88392857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xdZ-aj-Hxp">
@@ -150,6 +154,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

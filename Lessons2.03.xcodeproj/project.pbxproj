@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB7CD0BD26680BC10082305E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CD0BC26680BC10082305E /* SettingsViewController.swift */; };
 		AB8619662663698400600163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8619652663698400600163 /* AppDelegate.swift */; };
 		AB8619682663698400600163 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8619672663698400600163 /* SceneDelegate.swift */; };
 		AB86196A2663698400600163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8619692663698400600163 /* ViewController.swift */; };
 		AB86196D2663698400600163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86196B2663698400600163 /* Main.storyboard */; };
 		AB86196F2663698500600163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB86196E2663698500600163 /* Assets.xcassets */; };
 		AB8619722663698500600163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8619702663698500600163 /* LaunchScreen.storyboard */; };
-		AB86197A2663AFB300600163 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8619792663AFB300600163 /* CustomSecureTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB7CD0BC26680BC10082305E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AB8619622663698400600163 /* Lessons2.03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lessons2.03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8619652663698400600163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB8619672663698400600163 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		AB86196E2663698500600163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8619712663698500600163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB8619732663698500600163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB8619792663AFB300600163 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				AB86196E2663698500600163 /* Assets.xcassets */,
 				AB8619702663698500600163 /* LaunchScreen.storyboard */,
 				AB8619732663698500600163 /* Info.plist */,
-				AB8619792663AFB300600163 /* CustomSecureTextField.swift */,
+				AB7CD0BC26680BC10082305E /* SettingsViewController.swift */,
 			);
 			path = Lessons2.03;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB86196A2663698400600163 /* ViewController.swift in Sources */,
-				AB86197A2663AFB300600163 /* CustomSecureTextField.swift in Sources */,
 				AB8619662663698400600163 /* AppDelegate.swift in Sources */,
 				AB8619682663698400600163 /* SceneDelegate.swift in Sources */,
+				AB7CD0BD26680BC10082305E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
